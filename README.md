@@ -53,7 +53,7 @@ The following python libraries are used in this project:
 - **./app/templates/go.html**: HTML component of the flask app
 
 
-##Acknowledgements
+## Acknowledgements
 
 - The [Udacity Data Science Program](https://www.udacity.com/course/data-scientist-nanodegree--nd025)
 
