@@ -49,6 +49,7 @@ def clean_data(df):
     This function removes duplicates of the dataframe
     '''
     df = df.drop_duplicates()
+    df = df[df.related!=2]
     return df
 
 
