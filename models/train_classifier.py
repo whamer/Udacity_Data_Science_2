@@ -38,8 +38,8 @@ def load_data(database_filepath):
     engine = create_engine(dbfile)
     df = pd.read_sql(database_filepath.replace(".db", "").replace("data/", ""), engine)
     X = df.message.values
-    Y = df.drop(columns=['id','message','original']).values.astype(str)
-    column_names = df.drop(columns=['id','message','original']).columns
+    Y = df.drop(columns=['id','message']).values.astype(str)
+    column_names = df.drop(columns=['id','message']).columns
     return X, Y, column_names
 
 
@@ -108,6 +108,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
     y_pred = pd.DataFrame(predicted,columns=category_names)
     
     for colnam in y_true.columns:
+        print("Test of " + colnam + ":")
         print(classification_report(y_true[colnam], y_pred[colnam]))
 
 
