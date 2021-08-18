@@ -32,7 +32,7 @@ def load_data(messages_filepath, categories_filepath):
         categories[column] = pd.to_numeric(categories[column])
     
     # Replace categories column in df with new category columns.        
-    df = df.drop(columns=['categories'])
+    df = df.drop(columns=['categories','original'])
     # concatenate the original dataframe with the new `categories` dataframe
     df = pd.concat([df, categories.reset_index(drop=True)], axis=1)
     return df
@@ -46,10 +46,12 @@ def clean_data(df):
     OUTPUT
     df - cleaned dataframe
     
-    This function removes duplicates of the dataframe
+    This function removes duplicates of the dataframe and drops NA values
     '''
     df = df.drop_duplicates()
     df = df[df.related!=2]
+    df = df.dropna()
+    
     return df
 
 
