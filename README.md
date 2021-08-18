@@ -16,7 +16,7 @@
 
 ## Motivation for the project
 
-The aim of this analysis as part of the Udacity Data Science Nanodegree was to enable users to use a web interface to categorize text in the context of disasters. 
+The aim of this analysis as part of the Udacity Data Science Nanodegree was to enable users to use a web interface to categorize text in the context of disasters. The users can benefit from such an application, as a quick categorisation of messages can enable a quick assessment of the respective situation.
 
 
 ## Summary of the results
